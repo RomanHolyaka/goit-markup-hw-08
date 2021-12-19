@@ -1,0 +1,44 @@
+.mainhero-listbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.mainhero-listbtn__item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.mainhero-listbtn__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-light-color);
+  background-color: var(--white-light-color);
+  border: 0px;
+  border-radius: 4px;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--blue-light-color);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+  &.current {
+    color: var(--white-color);
+    background-color: var(--blue-light-color);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}

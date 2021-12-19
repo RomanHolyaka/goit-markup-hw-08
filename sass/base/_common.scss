@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  background-color: var(--white-color);
+  color: var(--grey-color);
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}

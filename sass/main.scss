@@ -1,0 +1,21 @@
+@import "./base/reset";
+@import "./base/common";
+
+@import "./utils/hidden";
+@import "./utils/vars";
+
+@import "./components/container";
+@import "./components/second-title";
+@import "./components/modal";
+@import "./components/placeholder";
+@import "./components/logo";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/feature";
+@import "./layout/about";
+@import "./layout/team";
+@import "./layout/client";
+@import "./layout/footer";
+@import "./layout/mainhero-btn";
+@import "./layout/mainhero-pictures";
