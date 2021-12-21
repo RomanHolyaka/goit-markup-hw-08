@@ -1,16 +1,28 @@
 .mainhero-listbtn {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .mainhero-listbtn__item {
+  margin-bottom: 15px;
   margin-right: 8px;
   &:last-child {
     margin-right: 0px;
   }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
 }
-
 .mainhero-listbtn__btn {
   display: inline-block;
   padding: 6px 22px;
