@@ -153,8 +153,6 @@ body {
   padding: 40px;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -166,6 +164,20 @@ body {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    margin: 0 auto;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__exit {
@@ -207,10 +219,21 @@ body {
   margin-bottom: 12px;
   font-weight: 900;
   font-size: 20px;
-  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-light-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal__form-title {
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__form-title {
+    line-height: 1.15;
+  }
 }
 
 .js-form__modal {
@@ -299,10 +322,22 @@ body {
 }
 
 .js-form__comment-box::placeholder {
-  font-size: 12px;
-  line-height: 14px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (max-width: 1199px) {
+  .js-form__comment-box::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .js-form__comment-box::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .js-form__checkbox {
@@ -325,17 +360,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--grey-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .js-form__label-checkbox {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .js-form__label-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .js-form__label-checkbox span {
   width: 16px;
   height: 15px;
   margin-right: 8.38px;
-  border: 1px solid #212121;
+  border: 2px solid #212121;
   border-radius: 2px;
   display: flex;
   justify-content: center;
