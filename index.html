@@ -15,7 +15,7 @@
 </head>
 <body>  
     <!--1 блок - логотип, посилання-->
-    <!--
+
     <header class="header">
      <div class="container header-container">
        <nav class="header__navigation">
@@ -40,10 +40,62 @@
                         </svg>+38 096 111 11 11</a></li>
             </ul>
         </div>
+        <button class="open-menu-btn" type="button">
+            <svg class="open-menu-btn__icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+        </button>
     </div>
+        <div class="mob-menu is-hidden">
+            <div class="container">
+                <div class="mob-menu-top">
+                    <button class="close-menu-btn" type="button">
+                        <svg class="close-menu-btn__icon" width="40px" height="40px">
+                            <use href="./images/symbol-exit.svg#icon-close-black-18dp-2-1"></use>
+                        </svg>
+                    </button>
+                    <ul class="mob-menu_list list">
+                        <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link current">Студия</a></li>
+                        <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+                        <li class="mob-menu__item"><a href="/" class="mob-menu__link link">Контакты</a></li>
+                    </ul>
+                 </div>
+                 <div class="mob-menu-bottom">
+                    <ul class="mob-connect list ">
+                        <li class="mob-connect__item">
+                                <a href="tel:+380961111111" class="mob-connect__contact link tel">
+                                +38 096 111 11 11
+                                </a>
+                        </li>
+                        <li class="mob-connect__item">
+                            <a href="mailto:info@devstudio.com" class="mob-connect__contact link">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-social list">
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link link"> Instagram 
+                                <svg class="mob-social__border"></svg> </a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link link" >Twitter
+                                <svg class="mob-social__border"></svg>
+                            </a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link link">Facebook
+                                <svg class="mob-social__border"></svg>
+                            </a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
-    -->
-
+  
     <!-- основний блок - заголовок, кнопка тощо-->
     <main class="main">
         <section class="hero section">
@@ -527,5 +579,6 @@
             </div>
      </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
