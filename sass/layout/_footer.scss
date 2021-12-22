@@ -1,16 +1,26 @@
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
+
   background-color: var(--black-blue-color);
-}
-.pulse {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    width: calc(100 / 2 - 30px);
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 .footer__boxlogo {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 .footer__colortext-web {
   color: var(--blue-light-color);
@@ -19,9 +29,12 @@
   margin-top: 20px;
 }
 .footer-list__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   &:last-child {
     margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
   }
 }
 .footer-list__map {
@@ -51,7 +64,9 @@
 }
 
 .footer__icon {
-  margin-right: auto;
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
 }
 .footer__third-title {
   margin-bottom: 20px;
@@ -63,6 +78,12 @@
 
 .footer-list-icon {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
 }
 .footer-list-icon__item-icon {
   margin-right: 10px;
@@ -90,18 +111,26 @@
     background: var(--blue-light-color);
   }
 }
+.footer__subscrip {
+  margin-top: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
+}
 
 .footer-js-form {
-  display: flex;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .footer-js-form__input-subscrip {
-  width: 358px;
+  width: 450px;
   height: 50px;
-  margin-right: 12px;
   padding-left: 16px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -120,14 +149,24 @@
   &:focus {
     border-color: var(--blue-light-color);
   }
+  @media screen and (min-width: 768px) {
+    width: 358px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 .footer-js-form__btn-subscript {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 36px;
   padding-right: 21px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.87;
@@ -144,6 +183,13 @@
   &:focus {
     background: rgb(29, 125, 204);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 

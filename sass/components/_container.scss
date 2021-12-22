@@ -3,6 +3,7 @@
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+
   @media screen and (min-width: 480px) {
     width: 450px;
     padding: 0px;
@@ -12,5 +13,9 @@
   }
   @media screen and (min-width: 1200px) {
     width: 1170px;
+    &.pulse {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }
