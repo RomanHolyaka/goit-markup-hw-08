@@ -5,13 +5,6 @@
   border-bottom: var(--grey-middle-color);
 }
 
-.header-list__item {
-  margin-right: 50px;
-  &:last-child {
-    margin-right: 0px;
-  }
-}
-
 .header__colortext-web {
   color: var(--blue-light-color);
 }
@@ -25,26 +18,64 @@
   @media screen and(max-width:767px) {
     display: none;
   }
+  &.tel-mail {
+    @media screen and(max-width:1199px) {
+      display: block;
+    }
+  }
 }
+.header-list__item {
+  @media screen and(min-width:1200px) {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &.contact {
+    @media screen and(max-width:1199px) {
+      display: flex;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
 .header__tel-mail {
   margin-left: auto;
+  @media screen and(max-width:767px) {
+    display: none;
+  }
 }
 
 .header-list__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+  &.envelope {
+    width: 14px;
+    height: 10px;
+    @media screen and(min-width:1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &.smartphone {
+    width: 10px;
+    height: 14px;
+    @media screen and(min-width:1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
 
-.header-list__mail,
-.header-list__tel {
+.header-list__connect {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
   letter-spacing: 0.02em;
   color: var(--grey-color);
   transition-property: color;
@@ -53,6 +84,12 @@
   &:hover,
   &:focus {
     color: var(--blue-light-color);
+  }
+  @media screen and(min-width:1199px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -69,16 +106,19 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and(max-width:1199px) {
+    margin-right: 50px;
+  }
   &:hover,
   &:focus {
     color: var(--blue-light-color);
   }
   &.current {
     color: var(--blue-light-color);
-  }
-  &.current::after {
-    transform: scale(1);
-    background: var(--blue-light-color);
+    &::after {
+      transform: scale(1);
+      background: var(--blue-light-color);
+    }
   }
   &::after {
     content: "";
