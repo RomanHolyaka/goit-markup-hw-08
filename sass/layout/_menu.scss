@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
   z-index: 5;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -23,7 +24,6 @@
     display: none;
   }
 }
-
 .mob-menu__item {
   margin-bottom: 32px;
   &:last-child {
@@ -32,9 +32,6 @@
 }
 
 .mob-menu__link {
-  /* display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;*/
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
@@ -74,6 +71,7 @@
     background: var(--blue-light-color);
   }
 }
+
 .mob-connect {
   margin-bottom: 64px;
 }
@@ -121,6 +119,28 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
+
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  & .icon-cross {
+    display: none;
+  }
+  & .is-open .icon-cross {
+    display: block;
+  }
+  & .is-open .icon-menu {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
 .open-menu-btn {
   margin-left: auto;
   background: transparent;
