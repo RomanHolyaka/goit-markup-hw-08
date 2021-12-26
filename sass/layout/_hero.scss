@@ -65,7 +65,6 @@
 }
 
 .hero__title {
-  width: 360px;
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -74,6 +73,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  @media screen and (min-width: 480px) {
+    width: 360px;
+  }
   @media screen and (min-width: 1200px) {
     width: 696px;
     font-weight: 900;
@@ -84,6 +86,7 @@
 .hero__btn {
   width: 200px;
   height: 50px;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;

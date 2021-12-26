@@ -17,9 +17,9 @@
 .footer-box-icon {
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: center;
     align-items: baseline;
     text-align: center;
-    margin-left: 76px;
   }
   @media screen and (min-width: 1200px) {
     text-align: left;
@@ -121,7 +121,7 @@
   color: var(--white-color);
   fill: currentColor;
 
-  transition-property: background;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
@@ -147,7 +147,6 @@
 }
 
 .footer-js-form__input-subscrip {
-  width: 450px;
   height: 50px;
   padding-left: 16px;
   margin-bottom: 20px;
@@ -168,6 +167,9 @@
   &:hover,
   &:focus {
     border-color: var(--blue-light-color);
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
   }
   @media screen and (min-width: 1200px) {
     width: 358px;
@@ -194,7 +196,7 @@
   border: 0px;
   border-radius: 4px;
 
-  transition-property: background, box-shadow;
+  transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,

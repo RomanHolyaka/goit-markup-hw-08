@@ -14,12 +14,8 @@
   @media screen and (min-width: 768px) {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0px;
-    }
   }
   @media screen and (min-width: 1200px) {
-    /*width: 370px;*/
     width: calc(100% / 3 - 30px);
     margin-left: 30px;
     &:nth-last-child(-n + 3) {
@@ -28,7 +24,9 @@
   }
 }
 .mainhero-list__card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
 
   transition-property: box-shadow;
@@ -43,6 +41,9 @@
   &:focus ::before {
     transform: translatey(calc(0%));
     background-color: rgba(33, 150, 243, 0.9);
+  }
+  @media screen and (max-width: 767px) {
+    overflow: scroll;
   }
 }
 .mainhero-list__animation {
@@ -64,6 +65,7 @@
 
 .mainhero-list__lorem-text {
   position: absolute;
+
   top: 63px;
   left: 24px;
   right: 24px;
@@ -85,6 +87,7 @@
   padding: 20px 24px;
   border: var(--white-middle-color);
   border-top: 0px;
+  flex-grow: 1;
 }
 .mainhero-list__title {
   margin-bottom: 4px;

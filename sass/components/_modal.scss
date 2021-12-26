@@ -107,6 +107,7 @@
 }
 .modal-form {
   position: relative;
+  fill: currentColor;
 }
 .modal-form,
 .modal-form__subscrip,
@@ -128,7 +129,7 @@
     border-color: var(--blue-light-color);
 
     transition-property: border-color;
-    transition-duration: 250ms;
+    transition-duration: 750ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -140,7 +141,6 @@
   transform: translate(50%, 50%);
   display: inline-block;
   color: var(--black-color);
-  fill: currentColor;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -149,7 +149,7 @@
     color: var(--blue-light-color);
 
     transition-property: color;
-    transition-duration: 250ms;
+    transition-duration: 750ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -277,7 +277,7 @@
   border: 0px;
   border-radius: 4px;
 
-  transition-property: background, box-shadow;
+  transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,

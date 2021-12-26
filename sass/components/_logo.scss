@@ -2,8 +2,11 @@
   display: inline-block;
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
+
   color: var(--black-color);
+  @media screen and (min-width: 480px) {
+    margin-right: 93px;
+  }
 }
 .footer__logo {
   color: var(--white-color);

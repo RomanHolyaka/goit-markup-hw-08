@@ -85,6 +85,12 @@
   &:focus {
     color: var(--blue-light-color);
   }
+  & .mailing {
+    padding-top: 21px;
+  }
+  & .telephone {
+    padding-bottom: 21px;
+  }
   @media screen and(min-width:1199px) {
     padding-top: 32px;
     padding-bottom: 32px;
