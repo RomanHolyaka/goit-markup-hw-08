@@ -148,6 +148,8 @@ body {
 }
 
 .modal {
+  margin: 0 auto;
+  width: 95%;
   position: absolute;
   padding: 40px;
   top: 50%;
@@ -165,9 +167,8 @@ body {
   transform: translate(-50%, -50%) scale(0);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .modal {
-    margin: 0 auto;
     width: 450px;
   }
 }
@@ -508,19 +509,40 @@ body {
   align-items: center;
 }
 
+.header-list {
+  margin-right: 50px;
+}
+
 @media screen and (max-width: 767px) {
   .header-list {
     display: none;
   }
 }
 
-@media screen and (max-width: 1199px) {
+.header-list.tel-mail {
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
   .header-list.tel-mail {
     display: block;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .header-list.tel-mail {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-list:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .header-list__item {
     margin-right: 50px;
   }
@@ -541,12 +563,6 @@ body {
 
 .header__tel-mail {
   margin-left: auto;
-}
-
-@media screen and (max-width: 767px) {
-  .header__tel-mail {
-    display: none;
-  }
 }
 
 .header-list__icon {
@@ -595,15 +611,16 @@ body {
   color: var(--blue-light-color);
 }
 
-.header-list__connect .mailing {
-  padding-top: 21px;
+@media screen and (max-width: 1199px) {
+  .header-list__connect.mailing {
+    padding-top: 21px;
+  }
+  .header-list__connect.telephone {
+    padding-bottom: 21px;
+  }
 }
 
-.header-list__connect .telephone {
-  padding-bottom: 21px;
-}
-
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .header-list__connect {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -625,12 +642,6 @@ body {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (max-width: 1199px) {
-  .header-list__link {
-    margin-right: 50px;
-  }
 }
 
 .header-list__link:hover, .header-list__link:focus {
@@ -849,7 +860,6 @@ body {
 
 .about-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -1466,15 +1476,9 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-@media screen and (max-width: 767px) {
-  .mainhero-list__card {
-    overflow: scroll;
-  }
-}
-
 .mainhero-list__animation {
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .mainhero-list__animation::before {
@@ -1487,6 +1491,12 @@ body {
   transition-property: background-color, transform;
   transition-duration: 750ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 767px) {
+  .mainhero-list__animation {
+    overflow: hidden;
+  }
 }
 
 .mainhero-list__lorem-text {
@@ -1539,7 +1549,7 @@ body {
   top: 0;
   left: 0;
   z-index: 5;
-  padding: 48px;
+  padding: 40px;
   transform: translateX(1000%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1611,13 +1621,7 @@ body {
 }
 
 .mob-connect {
-  margin-bottom: 0px;
-}
-
-@media screen and (min-width: 480px) {
-  .mob-connect {
-    margin-bottom: 64px;
-  }
+  margin-bottom: 64px;
 }
 
 .mob-connect__item {
@@ -1630,7 +1634,7 @@ body {
 
 .mob-connect__contact {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: calc(28 / 24);
   letter-spacing: 0.02em;
   color: var(--grey-color);
@@ -1644,9 +1648,18 @@ body {
 }
 
 .mob-connect__contact.tel {
-  font-size: 34px;
-  line-height: 40px;
   color: var(--blue-light-color);
+}
+
+@media screen and (min-width: 480px) {
+  .mob-connect__contact {
+    font-size: 24px;
+  }
+  .mob-connect__contact.tel {
+    font-size: 34px;
+    line-height: 40px;
+    color: var(--blue-light-color);
+  }
 }
 
 .mob-social {
@@ -1660,14 +1673,22 @@ body {
 }
 
 .mob-social__item {
+  width: max-content;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: calc(22 / 18);
   letter-spacing: 0.02em;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-social__item:last-child {
+  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 480px) {
   .mob-social__item {
+    margin-bottom: 0px;
     padding-right: 10px;
     padding-left: 10px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
