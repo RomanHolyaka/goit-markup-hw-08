@@ -357,11 +357,17 @@ body {
 }
 
 .js-form__label-checkbox {
-  display: flex;
+  display: -webkit-inline-box;
   justify-content: center;
   align-items: center;
   letter-spacing: 0.03em;
   color: var(--grey-color);
+}
+
+@media screen and (min-width: 480px) {
+  .js-form__label-checkbox {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -708,6 +714,9 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/0-hero.jpg);
@@ -1495,6 +1504,9 @@ body {
 .mainhero-list__animation {
   position: relative;
   overflow: scroll;
+  border: var(--white-middle-color);
+  border-top: 0px;
+  border-bottom: 0px;
 }
 
 .mainhero-list__animation::before {
@@ -1502,11 +1514,24 @@ body {
   position: absolute;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 300px;
   transform: translatey(300px);
   transition-property: background-color, transform;
   transition-duration: 750ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .mainhero-list__animation::before {
+    height: 100%;
+    border: 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mainhero-list__animation {
+    border: 0px;
+  }
 }
 
 @media screen and (min-width: 767px) {

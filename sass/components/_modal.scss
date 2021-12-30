@@ -206,11 +206,14 @@
   color: var(--blue-light-color);
 }
 .js-form__label-checkbox {
-  display: flex;
+  display: -webkit-inline-box;
   justify-content: center;
   align-items: center;
   letter-spacing: 0.03em;
   color: var(--grey-color);
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
   @media screen and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
